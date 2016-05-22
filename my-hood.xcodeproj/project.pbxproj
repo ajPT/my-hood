@@ -12,6 +12,8 @@
 		E059C1151CF1BDBB0064FD2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E059C1131CF1BDBB0064FD2C /* Main.storyboard */; };
 		E059C1171CF1BDBB0064FD2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E059C1161CF1BDBB0064FD2C /* Assets.xcassets */; };
 		E059C11A1CF1BDBB0064FD2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E059C1181CF1BDBB0064FD2C /* LaunchScreen.storyboard */; };
+		E059C1241CF1CC7F0064FD2C /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E059C1231CF1CC7F0064FD2C /* PostCell.swift */; };
+		E059C1261CF1CDB40064FD2C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E059C1251CF1CDB40064FD2C /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E059C1161CF1BDBB0064FD2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E059C1191CF1BDBB0064FD2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E059C11B1CF1BDBB0064FD2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E059C1231CF1CC7F0064FD2C /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		E059C1251CF1CDB40064FD2C /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 		E059C10E1CF1BDBB0064FD2C /* my-hood */ = {
 			isa = PBXGroup;
 			children = (
+				E059C1221CF1CC670064FD2C /* Model */,
+				E059C1211CF1CC620064FD2C /* View */,
 				E059C10F1CF1BDBB0064FD2C /* AppDelegate.swift */,
 				E059C1111CF1BDBB0064FD2C /* ViewController.swift */,
 				E059C1131CF1BDBB0064FD2C /* Main.storyboard */,
@@ -62,6 +68,22 @@
 				E059C11B1CF1BDBB0064FD2C /* Info.plist */,
 			);
 			path = "my-hood";
+			sourceTree = "<group>";
+		};
+		E059C1211CF1CC620064FD2C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E059C1231CF1CC7F0064FD2C /* PostCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E059C1221CF1CC670064FD2C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E059C1251CF1CDB40064FD2C /* Post.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +159,8 @@
 			files = (
 				E059C1121CF1BDBB0064FD2C /* ViewController.swift in Sources */,
 				E059C1101CF1BDBB0064FD2C /* AppDelegate.swift in Sources */,
+				E059C1241CF1CC7F0064FD2C /* PostCell.swift in Sources */,
+				E059C1261CF1CDB40064FD2C /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
