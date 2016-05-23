@@ -8,16 +8,19 @@
 
 import UIKit
 
-class AddPostVC: UIViewController {
+class AddPostVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    @IBOutlet weak var postImg: UIImageView!
+    @IBOutlet weak var addPicBtn: UIButton!
+    @IBOutlet weak var postImg: RoundedImage!
     @IBOutlet weak var descriptionField: UITextField!
     @IBOutlet weak var titleField: UITextField!
     
+    var imagePicker: UIImagePickerController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        postImg.layer.cornerRadius = postImg.frame.size.width / 2
-        postImg.clipsToBounds = true
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
     }
 
     @IBAction func onMakePostBtnPressed(sender: AnyObject) {
@@ -25,12 +28,26 @@ class AddPostVC: UIViewController {
     }
     
     @IBAction func onAddPicBtnPressed(sender: AnyObject) {
-        sender.setTitle("", forState: .Normal)
-    
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+            //imagePicker = UIImagePickerController()
+            //imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            imagePicker.allowsEditing = false
+            if let availableMediaTypes = UIImagePickerController.availableMediaTypesForSourceType(.PhotoLibrary) {
+                imagePicker.mediaTypes = availableMediaTypes
+            }
+            presentViewController(imagePicker, animated: true, completion: nil)
+        }
     }
     
     @IBAction func onCancelBtnPressed(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        postImg.image = image
+        addPicBtn.hidden = true
     }
 
 }

@@ -60,7 +60,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="87"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barrel-water-bridge" translatesAutoresizingMaskIntoConstraints="NO" id="ATF-oL-2EL">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barrel-water-bridge" translatesAutoresizingMaskIntoConstraints="NO" id="ATF-oL-2EL" customClass="RoundedImage" customModule="my_hood" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="70" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="CKx-xa-h8U"/>
@@ -175,7 +175,7 @@
                                     <constraint firstAttribute="bottom" secondItem="dbX-TI-M5x" secondAttribute="bottom" constant="8" id="kVa-fU-Ynf"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A4F-R6-NJy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A4F-R6-NJy" customClass="RoundedImage" customModule="my_hood" customModuleProvider="target">
                                 <rect key="frame" x="180" y="99" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="abR-af-Hw0"/>
@@ -247,6 +247,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addPicBtn" destination="bf5-j0-oNW" id="zZQ-Ig-vnG"/>
                         <outlet property="descriptionField" destination="YdZ-g0-sHX" id="pQd-K5-jYj"/>
                         <outlet property="postImg" destination="A4F-R6-NJy" id="VNs-uR-mPy"/>
                         <outlet property="titleField" destination="Wn5-Ll-qd6" id="RLQ-QE-Zs9"/>

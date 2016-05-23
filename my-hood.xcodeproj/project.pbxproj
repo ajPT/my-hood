@@ -15,6 +15,7 @@
 		E059C1241CF1CC7F0064FD2C /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E059C1231CF1CC7F0064FD2C /* PostCell.swift */; };
 		E059C1261CF1CDB40064FD2C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E059C1251CF1CDB40064FD2C /* Post.swift */; };
 		E059C1291CF1EA800064FD2C /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E059C1281CF1EA800064FD2C /* AddPostVC.swift */; };
+		E059C12B1CF317060064FD2C /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E059C12A1CF317060064FD2C /* RoundedImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E059C1231CF1CC7F0064FD2C /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		E059C1251CF1CDB40064FD2C /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E059C1281CF1EA800064FD2C /* AddPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
+		E059C12A1CF317060064FD2C /* RoundedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				E059C1181CF1BDBB0064FD2C /* LaunchScreen.storyboard */,
 				E059C1131CF1BDBB0064FD2C /* Main.storyboard */,
 				E059C1231CF1CC7F0064FD2C /* PostCell.swift */,
+				E059C12A1CF317060064FD2C /* RoundedImage.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				E059C1121CF1BDBB0064FD2C /* ViewController.swift in Sources */,
 				E059C1101CF1BDBB0064FD2C /* AppDelegate.swift in Sources */,
 				E059C1291CF1EA800064FD2C /* AddPostVC.swift in Sources */,
+				E059C12B1CF317060064FD2C /* RoundedImage.swift in Sources */,
 				E059C1241CF1CC7F0064FD2C /* PostCell.swift in Sources */,
 				E059C1261CF1CDB40064FD2C /* Post.swift in Sources */,
 			);

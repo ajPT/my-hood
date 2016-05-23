@@ -10,16 +10,12 @@ import UIKit
 
 class PostCell: UITableViewCell {
     
-    @IBOutlet weak var postImage: UIImageView!
+    @IBOutlet weak var postImage: RoundedImage!
     @IBOutlet weak var postTitle: UILabel!
     @IBOutlet weak var postDescription: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        postImage.layer.cornerRadius = postImage.frame.size.width / 2
-        postImage.clipsToBounds = true
-
     }
     
     func configureCell(post: Post) {
