@@ -28,10 +28,10 @@ class AddPostVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     }
     
     @IBAction func onAddPicBtnPressed(sender: AnyObject) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+        if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) {
             //imagePicker = UIImagePickerController()
             //imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            imagePicker.sourceType = .PhotoLibrary
             imagePicker.allowsEditing = false
             if let availableMediaTypes = UIImagePickerController.availableMediaTypesForSourceType(.PhotoLibrary) {
                 imagePicker.mediaTypes = availableMediaTypes
