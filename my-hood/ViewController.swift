@@ -12,23 +12,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var tableView: UITableView!
     
-    var posts = [Post]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
-        //test data
-        let post1 = Post(imagePath: "", title: "post 1 title", desc: "pst1 desc yooooooo uvwbuvwubviwb!")
-        let post2 = Post(imagePath: "", title: "post2 title", desc: "pst2 fainefuabuaubviwb!")
-        let post3 = Post(imagePath: "", title: "post3title", desc: "pst3 evequ veeq qeo viwb!")
-        
-        posts.append(post1)
-        posts.append(post2)
-        posts.append(post3)
-        
-        tableView.reloadData()
+        DataService.instance.loadPosts()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.loadedPosts), name: "postLoaded", object: nil)
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -36,7 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return DataService.instance.loadedPosts.count
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -45,7 +34,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let post = posts[indexPath.row]
+        let post = DataService.instance.loadedPosts[indexPath.row]
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
             cell.configureCell(post)
@@ -55,6 +44,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.configureCell(post)
             return cell
         }
+    }
+    
+    func loadedPosts() {
+        tableView.reloadData()
     }
 
 }

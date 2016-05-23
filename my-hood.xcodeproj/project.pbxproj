@@ -16,6 +16,7 @@
 		E059C1261CF1CDB40064FD2C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E059C1251CF1CDB40064FD2C /* Post.swift */; };
 		E059C1291CF1EA800064FD2C /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E059C1281CF1EA800064FD2C /* AddPostVC.swift */; };
 		E059C12B1CF317060064FD2C /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E059C12A1CF317060064FD2C /* RoundedImage.swift */; };
+		E059C12E1CF320C80064FD2C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E059C12D1CF320C80064FD2C /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E059C1251CF1CDB40064FD2C /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E059C1281CF1EA800064FD2C /* AddPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
 		E059C12A1CF317060064FD2C /* RoundedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
+		E059C12D1CF320C80064FD2C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		E059C10E1CF1BDBB0064FD2C /* my-hood */ = {
 			isa = PBXGroup;
 			children = (
+				E059C12C1CF3207D0064FD2C /* Services */,
 				E059C1221CF1CC670064FD2C /* Model */,
 				E059C1211CF1CC620064FD2C /* View */,
 				E059C1271CF1EA5C0064FD2C /* Controller */,
@@ -98,6 +101,14 @@
 				E059C1281CF1EA800064FD2C /* AddPostVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		E059C12C1CF3207D0064FD2C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E059C12D1CF320C80064FD2C /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E059C1121CF1BDBB0064FD2C /* ViewController.swift in Sources */,
+				E059C12E1CF320C80064FD2C /* DataService.swift in Sources */,
 				E059C1101CF1BDBB0064FD2C /* AppDelegate.swift in Sources */,
 				E059C1291CF1EA800064FD2C /* AddPostVC.swift in Sources */,
 				E059C12B1CF317060064FD2C /* RoundedImage.swift in Sources */,
